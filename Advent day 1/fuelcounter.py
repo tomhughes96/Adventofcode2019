@@ -7,7 +7,7 @@ def totalfuel(Fuel): #total fuel for a module
 	x = Fuel
 	while x > 6:
 		x = massfuel(x) 
-		total = total + x 
+		total += x 
 		print(x)
 		print(total)
 	return total
@@ -15,8 +15,8 @@ def totalfuel(Fuel): #total fuel for a module
 def fuel_counter(masslist): #fuel for all modules
 	Fuel = 0
 	for x in masslist:
-		#Fuel = Fuel + massfuel(x) pt 1
-		Fuel = Fuel + totalfuel(massfuel(x))
+		#Fuel += massfuel(x) pt 1
+		Fuel += totalfuel(massfuel(x))
 	print(Fuel)
 	return Fuel
 
